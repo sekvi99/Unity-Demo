@@ -1,5 +1,7 @@
+using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Player : MonoBehaviour
 {
@@ -11,6 +13,8 @@ public class Player : MonoBehaviour
 
     [SerializeField] private float speed = 4f;
 
+    public UnityEvent OnPlayerDeath;
+    
     private Vector2 _movement;
 
     private void FixedUpdate()
@@ -26,5 +30,15 @@ public class Player : MonoBehaviour
 
         _movement = new Vector2(horizontalInput, verticalInput);
         _movement.Normalize(); // normalize movement vector so it has a length of 1
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (OnPlayerDeath is not null)
+        {
+            OnPlayerDeath.Invoke();
+        }
+        
+        Destroy(gameObject);
     }
 }

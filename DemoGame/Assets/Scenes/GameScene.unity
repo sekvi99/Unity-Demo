@@ -8791,7 +8791,7 @@ GameObject:
   - component: {fileID: 416778471}
   m_Layer: 0
   m_Name: Cloud_1
-  m_TagString: Untagged
+  m_TagString: Cloud
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9632,8 +9632,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontalAxis: Horizontal
   verticalAxis: Vertical
-  rb2d: {fileID: 0}
+  rb2d: {fileID: 1001198170}
   speed: 10
+--- !u!50 &1001198170 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 1244818932348725936, guid: aef68af7c544d8343a3a05c14d4b2afb, type: 3}
+  m_PrefabInstance: {fileID: 1054575148974739708}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1125373698
 GameObject:
   m_ObjectHideFlags: 0
@@ -9646,7 +9651,7 @@ GameObject:
   - component: {fileID: 1125373700}
   m_Layer: 0
   m_Name: Cloud_6
-  m_TagString: Untagged
+  m_TagString: Cloud
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10649,7 +10654,7 @@ GameObject:
   - component: {fileID: 1204615391}
   m_Layer: 0
   m_Name: Cloud_3
-  m_TagString: Untagged
+  m_TagString: Cloud
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10764,7 +10769,7 @@ GameObject:
   - component: {fileID: 1298046151}
   m_Layer: 0
   m_Name: Cloud_2
-  m_TagString: Untagged
+  m_TagString: Cloud
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10846,6 +10851,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1299508688}
   - component: {fileID: 1299508690}
+  - component: {fileID: 1299508691}
   m_Layer: 0
   m_Name: WeaponParent
   m_TagString: Untagged
@@ -10896,6 +10902,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1299508691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1299508687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cd05e8a13da2414b8ba7a9891f595e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 500
+  rb2d: {fileID: 1299508690}
 --- !u!1 &1330029161
 GameObject:
   m_ObjectHideFlags: 0
@@ -10908,7 +10928,7 @@ GameObject:
   - component: {fileID: 1330029163}
   m_Layer: 0
   m_Name: Cloud_5
-  m_TagString: Untagged
+  m_TagString: Cloud
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10989,6 +11009,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1383926902}
+  - component: {fileID: 1383926903}
   m_Layer: 0
   m_Name: Coluds
   m_TagString: Untagged
@@ -11017,6 +11038,27 @@ Transform:
   - {fileID: 1125373699}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1383926903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383926901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef8642bc56e54c942b7456514ff6fe01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clouds:
+  - {fileID: 416778472}
+  - {fileID: 1298046152}
+  - {fileID: 1204615392}
+  - {fileID: 1749203570}
+  - {fileID: 1330029162}
+  - {fileID: 1125373699}
+  speed: 1
+  xLimit: 12.5
 --- !u!1 &1389844765
 GameObject:
   m_ObjectHideFlags: 0
@@ -11097,7 +11139,7 @@ GameObject:
   - component: {fileID: 1749203571}
   m_Layer: 0
   m_Name: Cloud_4
-  m_TagString: Untagged
+  m_TagString: Cloud
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
